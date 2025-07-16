@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['usuario']) || $_SESSION['idr'] != 1) {
-    header("Location: Frontend/iniciosession.html");
+    header("Location: ../Frontend/iniciosession.html");
     exit();
 }
 ?>

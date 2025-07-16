@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inicio de Sesión</title>
+    <title>Verificar Código</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -33,48 +33,26 @@
         class="card shadow-lg p-4 text-dark bg-white"
         style="max-width: 400px; width: 100%"
       >
-        <h1 class="text-center mb-3">Inicio de Sesión</h1>
+        <h1 class="text-center mb-3">Verificar Código</h1>
         <p class="text-center text-muted mb-4">
-          Bienvenido, por favor ingrese sus datos
+          Ingresa el código que recibiste en tu correo
         </p>
-
-        <form action="../Backend/auth.php" method="post">
+        <form action="../Backend/verificar_codigo.php" method="post">
           <div class="mb-3">
-            <label for="correo" class="form-label">Correo</label>
-            <input
-              type="email"
-              class="form-control"
-              id="correo"
-              name="correo"
-              placeholder="ejemplo@correo.com"
-              required
-            />
-          </div>
-          <div class="mb-3">
-            <label for="contraseña" class="form-label">Contraseña</label>
-            <input
-              type="password"
-              class="form-control"
-              id="contraseña"
-              name="contraseña"
-              placeholder="••••••••"
-              required
-            />
-          </div>
-          <div class="mb-3 text-end">
-            <a href="recuperar.html" class="link-secondary"
-              >¿Olvidó su contraseña?</a
+            <label for="codigo" class="form-label"
+              >Código de Verificación</label
             >
+            <input
+              type="text"
+              class="form-control"
+              id="codigo"
+              name="codigo"
+              placeholder="123456"
+              required
+            />
           </div>
           <div class="d-grid mb-3">
-            <button type="submit" class="btn btn-primary">
-              Iniciar sesión
-            </button>
-          </div>
-          <div class="text-center">
-            <span
-              >¿No tienes cuenta? <a href="registro.html">Registrarse</a></span
-            >
+            <button type="submit" class="btn btn-primary">Verificar</button>
           </div>
         </form>
       </div>
