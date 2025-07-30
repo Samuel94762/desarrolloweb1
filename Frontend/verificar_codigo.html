@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verificar Código</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background: linear-gradient(135deg, #6c5ce7, #00b894);
+      }
+      .card {
+        border-radius: 1rem;
+      }
+      .btn-primary {
+        background-color: #6c5ce7;
+        border-color: #6c5ce7;
+      }
+      .btn-primary:hover {
+        background-color: #5a4ccf;
+        border-color: #5a4ccf;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="container d-flex justify-content-center align-items-center min-vh-100"
+    >
+      <div
+        class="card shadow-lg p-4 text-dark bg-white"
+        style="max-width: 400px; width: 100%"
+      >
+        <h1 class="text-center mb-3">Verificar Código</h1>
+        <p class="text-center text-muted mb-4">
+          Ingresa el código que recibiste en tu correo
+        </p>
+        <form action="../Backend/verificar_codigo.php" method="post">
+          <div class="mb-3">
+            <label for="codigo" class="form-label"
+              >Código de Verificación</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="codigo"
+              name="codigo"
+              placeholder="123456"
+              required
+            />
+          </div>
+          <div class="d-grid mb-3">
+            <button type="submit" class="btn btn-primary">Verificar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

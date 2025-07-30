@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recuperar Contraseña</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background: linear-gradient(135deg, #6c5ce7, #00b894);
+      }
+      .card {
+        border-radius: 1rem;
+      }
+      .btn-primary {
+        background-color: #6c5ce7;
+        border-color: #6c5ce7;
+      }
+      .btn-primary:hover {
+        background-color: #5a4ccf;
+        border-color: #5a4ccf;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="container d-flex justify-content-center align-items-center min-vh-100"
+    >
+      <div
+        class="card shadow-lg p-4 text-dark bg-white"
+        style="max-width: 400px; width: 100%"
+      >
+        <h1 class="text-center mb-3">Recuperar Contraseña</h1>
+        <p class="text-center text-muted mb-4">
+          Ingresa tu correo para recibir un código de verificación
+        </p>
+        <form action="../Backend/recuperar.php" method="post">
+          <div class="mb-3">
+            <label for="correo" class="form-label">Correo Electrónico</label>
+            <input
+              type="email"
+              class="form-control"
+              id="correo"
+              name="correo"
+              placeholder="ejemplo@correo.com"
+              required
+            />
+          </div>
+          <div class="d-grid mb-3">
+            <button type="submit" class="btn btn-primary">Enviar Código</button>
+          </div>
+          <div class="text-center">
+            <span
+              >¿Recordaste tu contraseña?
+              <a href="iniciosession.html">Iniciar Sesión</a></span
+            >
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
